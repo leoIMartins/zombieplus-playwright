@@ -24,7 +24,7 @@ test('deve poder remover um filme', async ({ page, request }) => {
     await page.popup.haveText('Filme removido com sucesso.')
 })
 
-test('não deve cadastrar quando o título é duplicado', { tag: ['@tst'] }, async ({ page, request }) => {
+test('não deve cadastrar quando o título é duplicado', async ({ page, request }) => {
     const movie = data.duplicate
 
     await request.api.postMovie(movie)
